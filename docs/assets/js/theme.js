@@ -93,19 +93,7 @@
             $('.one-page-scroll-menu li:first').addClass('current');
         }
     }
-    if ($('.search-popup__toggler').length) {
-        $('.search-popup__toggler').on('click', function (e) {
-            $('.search-popup').addClass('active');
-            e.preventDefault();
-        });
-    }
 
-    if ($('.search-popup__overlay').length) {
-        $('.search-popup__overlay').on('click', function (e) {
-            $('.search-popup').removeClass('active');
-            e.preventDefault();
-        });
-    }
     if ($('.counter').length) {
         $('.counter').counterUp({
             delay: 10,

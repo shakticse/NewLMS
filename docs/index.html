@@ -84,6 +84,35 @@
     <!-- template scripts -->
     <script src="assets/js/theme.js"></script>
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<script src="runtime-es2015.409e6590615fb48d139f.js" type="module"></script><script src="runtime-es5.409e6590615fb48d139f.js" nomodule defer></script><script src="polyfills-es5.341d48ffc88eaeae911d.js" nomodule defer></script><script src="polyfills-es2015.95bb65e853d2781ac3bd.js" type="module"></script><script src="main-es2015.5af8edb51c12552ce873.js" type="module"></script><script src="main-es5.5af8edb51c12552ce873.js" nomodule defer></script></body>
-
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('body').on('click', '.search-popup__toggler', function (e) {
+                var cursor = $(".custom-cursor__overlay .cursor");
+                var follower = $(".custom-cursor__overlay .cursor-follower");
+                $('.search-popup').addClass('active');
+                cursor.removeClass("active");
+                follower.removeClass("active");
+                cursor.addClass("close-cursor");
+                follower.addClass("close-cursor");
+                e.preventDefault();
+            });
+            if ($('.search-popup__toggler').length) {
+                $('.search-popup__toggler').on('click', function (e) {
+                    $('.search-popup').addClass('active');
+                    e.preventDefault();
+                });
+            }
+            if ($('.search-popup__overlay').length) {
+                $('.search-popup__overlay').on('click', function (e) {
+                    var cursor = $(".custom-cursor__overlay .cursor");
+                    var follower = $(".custom-cursor__overlay .cursor-follower");
+                    $('.search-popup').removeClass('active');
+                    cursor.removeClass("active");
+                    follower.removeClass("active");
+                    e.preventDefault();
+                });
+            }
+        });
+    </script>
+<script src="runtime-es2015.409e6590615fb48d139f.js" type="module"></script><script src="runtime-es5.409e6590615fb48d139f.js" nomodule defer></script><script src="polyfills-es5.341d48ffc88eaeae911d.js" nomodule defer></script><script src="polyfills-es2015.95bb65e853d2781ac3bd.js" type="module"></script><script src="main-es2015.68b7107c525d6f440ee2.js" type="module"></script><script src="main-es5.68b7107c525d6f440ee2.js" nomodule defer></script></body>
 </html>
